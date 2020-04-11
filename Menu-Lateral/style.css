@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt:400,600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-mobile
+{
+    width: 100%;
+    height: 100vh;
+    background:rgba(0,0, 0, .1);
+    font-family: 'Prompt', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    z-index: 9;
+    display: none;
+    transition: all linear .3s;
+}
+
+.menu-mobile.show-menu
+{
+    display: block;
+}
+
+.icon-menu
+{
+    position: absolute;
+    font-size: 3.5rem;
+    color: rgb(73, 141, 73);
+    margin: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-mobile .menu
+{
+    width: 30vh;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7); 
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes open-menu{
+    from {
+        opacity: 0;
+        transform: translate3d(-80px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.menu-mobile.show-menu .menu{
+    animation: open-menu .3s;
+}
+
+.menu-mobile .menu ul
+{
+    width: 100%;
+    height: 60vh;
+    list-style: none;
+    position: relative;
+    top: 120px;
+}
+
+.menu-mobile .menu ul a
+{
+    text-decoration: none;
+    color: azure;
+}
+
+.menu-mobile .menu ul li
+{
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    padding: 8px 0 8px 20px;
+    transition: background .2s;
+
+}
+
+.menu-mobile .menu ul li:hover
+{
+    background-color: rgba(73, 141, 73, .8);
+}
+
+@media only screen and (min-width: 1200px)
+{
+    .icon-menu
+    {
+        display: none;
+    }
+    .menu-desktop
+    {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1190px)
+{
+    .icon-menu
+    {
+        display: block;
+    }
+    .menu-desktop
+    {
+        display: none;
+    }
+}

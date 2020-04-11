@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../library/effects.js"></script>
+</head>
+<body>
+
+    <h1 id="title">Olá, Mundo!!... Testando função de maquina de escrever</h1>
+
+    <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+    
+    <script>
+        const title = document.querySelector('#title')
+        const text = document.querySelector('p')
+
+
+        
+        typeWriter(title)
+        window.onscroll =  () => {
+            if(window.pageYOffset == window.innerHeight) typeWriter(text)
+        }
+    </script>
+</body>
+</html>

@@ -96,3 +96,15 @@
     background: #a50f0f;
     color: whitesmoke;
 }
+
+#show-modal{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px;
+    background: #0d2f8b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    
+}
