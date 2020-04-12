@@ -6,46 +6,17 @@
 
     <title>Menu Lateral</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
-        let show = false;
-        window.addEventListener('DOMContentLoaded', ()=>{
-            const icon = document.querySelector('.icon-menu')
-            const menu = document.querySelector('.menu-mobile')
-            icon.addEventListener('click', ()=>{
-                show = !show
-                console.log(menu)
-                if(show)
-                    showMenu()
-                else
-                    closeMenu()
-            })
-
-            menu.addEventListener('click', (e)=>{
-                if(show && e.target.classList[0] == 'menu-mobile'){
-                    show = !show
-                    closeMenu()
-                }                    
-            })
-
-            function showMenu()
-            {
-                let menu = document.querySelector('.menu-mobile')
-                menu.classList.add('show-menu')
-            }
-            function closeMenu()
-            {
-                let menu = document.querySelector('.menu-mobile')
-                menu.classList.remove('show-menu')
-            }
-        })
-    </script>
+    <script src="script.js"></script>
 
 </head>
 <body>
     
-    <i class="fa fa-html5 icon-menu" aria-hidden="true"></i>
-    <div class="menu-mobile">
+<header class="nav">
+    <i class="fa fa-bars icon-menu" aria-hidden="true"></i>
+    <a href="#" class="logo-menu"><i class="fa fa-html5" aria-hidden="true"></i></a>
+    <div class="menu-container menu-desktop">
         <div class="menu">
             <ul>
                 <a href="#"><li>Inicio</li></a>
@@ -55,16 +26,7 @@
             </ul>
         </div>
     </div>
-    <div class="menu-desktop">
-        <ul>
-            <a href="#"><li>Inicio</li></a>
-            <a href="#"><li>Porfólio</li></a>
-            <a href="#"><li>Contato</li></a>
-            <a href="#"><li>Sobre</li></a>
-        </ul>
-    </div>
-
-
+</header>
 
 
 

@@ -1,60 +1,130 @@
 /* Biblioteca de efeitos */
 
-/* Efeito máquina de escrever Typewriter */
-let name = 'Stylo'
-let styleCSS = document.createElement('style')
-let css = document.getElementById(name)
-styleCSS.type = "text/css"
-styleCSS.setAttribute('id', name)
+/* ----------------------------- MENU ----------------------------------------- */
+let show = false;
+        
+function showMenu()
+{
+    let menu = document.querySelector('.menu-container')
+    menu.classList.add('show-menu')
+}
+function closeMenu()
+{
+    let menu = document.querySelector('.menu-container')
+    menu.classList.remove('show-menu')
+}
+
+window.addEventListener('DOMContentLoaded', ()=>{
+    let menu = document.querySelector('.menu-container')
+    const icon = document.querySelector('.icon-menu')
+
+    if(window.innerWidth <= 1190)
+    {
+        menu.classList.remove('menu-desktop')
+        menu.classList.add('menu-mobile')
+    }
+    
+    icon.addEventListener('click', ()=>{
+        show = !show
+        if(show){
+            showMenu()
+        }
+        else{
+            closeMenu()
+        }
+    })
+    window.addEventListener('resize', (e)=>{
+        if(window.innerWidth <= 1190){
+            menu.classList.remove('menu-desktop')
+            menu.classList.add('menu-mobile')
+        }
+        else{
+            menu.classList.add('menu-desktop')
+            menu.classList.remove('menu-mobile')
+            show = false
+            closeMenu()
+        }
+    })
 
 
-function typeWriter(element){
-    let text = element.innerHTML
-    element.innerHTML = ''
-    /* Estilo css  */
-    const styleText = `
-    #${element.id}::after
+    menu.addEventListener('click', (e)=>{
+        console.log("Click menu")
+        if(show && e.target.classList[0] == 'menu-container' && menu.classList.contains('menu-mobile')){
+            show = !show
+            closeMenu()
+        }                    
+    })
+})
+/* ---------------------------------------- End MENU ---------------------------- */
+
+/*----------------------------------------- MODAL -------------------------------- */
+
+window.addEventListener('DOMContentLoaded', ()=>{
+    const btnModal = document.getElementById("show-modal")
+    if(btnModal){
+        btnModal.addEventListener('click', () =>{
+            const modal = document.getElementById('modal-container')
+            modal.classList.add('show')
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == 'modal-container' || e.target.classList[0] == "btn-modal-close" || e.target.innerHTML == "×")
+                {
+                    modal.classList.remove('show')
+                }
+                if(e.target.classList[0] == "btn-modal-ok")
+                {
+                    modal.classList.remove('show')
+                }
+            })
+        })
+    }
+})
+
+/* ------------------------------------- END MODAL ------------------------------- */
+
+
+/* -------------------------------- Typewriter ------------------------------------- */
+function typeWriter(elemento) 
+{
+    const texto = elemento.innerHTML
+    let styles = `
+    ${elemento.tagName.toLowerCase()}::after
     {
         content: '|';
         margin-left: 5px;
         opacity: 1;
-        animation: flash 0.5s infinite;
+        animation: pisca .7s infinite;
     }
-    
-    @keyframes flash{
-        0%, 100%{
+    @keyframes pisca 
+    {
+        0%, 100%
+        {
             opacity: 1;
         }
-        50%{
+        50%
+        {
             opacity: 0;
         }
     }
+
     `
-    styleCSS.innerHTML = styleText
-    if(!css) document.head.appendChild(styleCSS)
-    else css.innerHTML = styleType
-
-    for(let c = 0; c < text.length; c++)
-        setTimeout(() => element.innerHTML += text[c], 75 * c)
-    
-}
-
-
-/* ###### Modal ######## */
-
-function openModal(modalID){
-    const modal = document.getElementById(modalID)
-    modal.classList.add('mostrar')
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == modalID || e.target.classList[0] == "btn-modal-close")
-        {
-            modal.classList.remove('mostrar')
-            console.log(false)
-        }
-        if(e.target.classList[0] == "btn-modal-ok")
-        {
-            modal.classList.remove('mostrar')
-            console.log(true)
-        }
-    })
+    elemento.innerHTML = ''
+    let styleSheet = document.createElement('style')
+    styleSheet.type = 'text/css'
+    styleSheet.id = 'typewriter'
+    styleSheet.innerText = styles
+    document.head.appendChild(styleSheet)
+    for(let c = 0; c < texto.length; c++)
+    {
+     
+        setTimeout(()=> {
+            if(texto[c] == "\\")
+            {
+                elemento.innerHTML += "<br>"
+            }
+            else
+                elemento.innerHTML += texto[c]
+        }, 90 * c)
+     
+    }
+    /* document.head.removeChild(document.getElementById('typewriter')) */
 }

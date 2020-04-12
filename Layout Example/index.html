@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Layout</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../library/effects.css">
+    <script src="../library/effects.js"></script>
+
+
+    <link  rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <header class="nav">
+        <i class="fa fa-bars icon-menu" aria-hidden="true"></i>
+        <a href="#" class="logo-menu"><i class="fa fa-html5" aria-hidden="true"></i></a>
+        <div class="menu-container menu-desktop">
+            <div class="menu">
+                <ul>
+                    <a href="#"><li>Inicio</li></a>
+                    <a href="#"><li>Portfólio</li></a>
+                    <a href="#"><li>Contato</li></a>
+                    <a href="#"><li>Sobre</li></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-body">
+        <h3 id="typeWriter">
+            SOLUÇÕES DIGITAIS PARA SUA EMPRESA    
+            \\
+            TENHA O SOFTWARE QUE SEJA A CARA DA SUA EMPRESA.
+        </h3>
+        
+    </section>
+
+    <section class="container-flex">
+        <div class="content">
+            <div class="img-desktop bg-img mb"></div>
+            <h1>Desenvolvimento Desktop</h1>
+        </div>
+        <div class="content">
+            <div class="img-web bg-img mb"></div>
+            <h1>Desenvolvimento Web</h1>
+        </div>
+        <div class="content">
+            <div class="img-mobile bg-img mb"></div>
+            <h1>Desenvolvimento Mobile</h1>
+        </div>
+
+    </section>
+
+    <section class="container-text">
+        <div class="content-text">
+            <h1>Qualidade e Segurança Para Sua Empresa</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+
+
+    <script>
+        let text = document.querySelector('#typeWriter')
+        typeWriter(text)
+    </script>
+</body>
+</html>

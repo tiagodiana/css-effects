@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typewriter</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="../library/effects.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -18,12 +18,11 @@
         const title = document.querySelector('#title')
         const text = document.querySelector('p')
 
+        
 
         
-        typeWriter(title)
-        window.onscroll =  () => {
-            if(window.pageYOffset == window.innerHeight) typeWriter(text)
-        }
+        typeWriter(text)
+        
     </script>
 </body>
 </html>
