@@ -7,17 +7,18 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../library/effects.css">
-    <script src="../library/effects.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/effects.css">
+    <script src="js/effects.js"></script>
 
-
-    <link  rel="stylesheet" type="text/css" href="styles.css">
+    <script src="js/script.js"></script>
+    <link  rel="stylesheet" type="text/css" href="css/wavyCicle.css">
+    <link  rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
     <header class="nav">
         <i class="fa fa-bars icon-menu" aria-hidden="true"></i>
-        <a href="#" class="logo-menu"><i class="fa fa-html5" aria-hidden="true"></i></a>
+        <a href="#" class="logo-menu"><img src="img/ANKH-TEC-logo.png"></a>
         <div class="menu-container menu-desktop">
             <div class="menu">
                 <ul>
@@ -31,24 +32,46 @@
     </header>
 
     <section class="container-body">
-        <h3 id="typeWriter">
-            SOLUÇÕES DIGITAIS PARA SUA EMPRESA    
-            \\
-            TENHA O SOFTWARE QUE SEJA A CARA DA SUA EMPRESA.
-        </h3>
-        
+        <div class="text-body">
+            <h3 id="typeWriter">
+                ANKH TECH
+                \\
+                SOLUÇÕES DIGITAIS 
+                \\
+                TENHA O SOFTWARE QUE SEJA A CARA DA SUA EMPRESA.
+            </h3>
+        </div>
+        <div class="effect-body ">
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </section>
 
     <section class="container-flex">
-        <div class="content">
+        <div class="content desktop">
             <div class="img-desktop bg-img mb"></div>
             <h1>Desenvolvimento Desktop</h1>
         </div>
-        <div class="content">
+        <div class="content web">
             <div class="img-web bg-img mb"></div>
             <h1>Desenvolvimento Web</h1>
         </div>
-        <div class="content">
+        <div class="content mobile">
             <div class="img-mobile bg-img mb"></div>
             <h1>Desenvolvimento Mobile</h1>
         </div>
@@ -57,15 +80,63 @@
 
     <section class="container-text">
         <div class="content-text">
-            <h1>Qualidade e Segurança Para Sua Empresa</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="content-text-title">
+                <h1>Qualidade <br>e<br> Segurança</h1>
+            </div>
+            <div class="content-text-icons">
+                <div class="content-img">
+                    <img src="img/Csharp.png">
+                    <img src="img/python.png">
+                    <img src="img/php.png">
+                    <img src="img/html.png">
+                    <img src="img/css.png">
+                    <img src="img/js.png">
+                    <img src="img/mysql.png">
+                    <img src="img/native.png">
+                    <img src="img/django.png">
+                </div>
+                <div class="content-text-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
         </div>
     </section>
 
 
+
+<!-- MODAL -->
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Contato</h3>
+                <span>&times;</span>
+            </div>
+            <div class="modal-body">
+                Whatsapp (15) 99647-0168 
+            </div>
+            <div class="modal-footer">
+                <input type="button" class="btn-modal-ok" value="Ok">
+            </div>
+        </div>
+    </div>
+<!-- FIM MODAL -->
+
+    <footer class="container-footer">
+        <div class="content-footer-left">
+            
+        </div>
+        <div class="content-footer-right">
+            <a href="https://www.facebook.com/tiago.r.floyd" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""></a>
+            <a href="https://www.github.com/tiagodiana" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            <a  id="show-modal"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+
+        </div>
+    </footer>
+
     <script>
-        let text = document.querySelector('#typeWriter')
-        typeWriter(text)
+
+        
     </script>
 </body>
 </html>

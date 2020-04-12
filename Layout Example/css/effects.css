@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt:600|Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
 /* ---------------------------------- Style Menu ---------------------- */
 /* Style Menu Mobile */
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* 
+COLORS:
+    Green rgba(73, 141, 73, .8) 
+    Grey  rgba(100, 100, 100, .5)
+*/
 .menu-container
 {
     font-family: 'Prompt', sans-serif;
@@ -39,7 +38,7 @@
 {
     position: absolute;
     font-size: 2.5rem;
-    color: rgb(73, 141, 73);
+    color: rgba(150, 150, 150, 1);
     margin: 25px 0 10px 20px;
     cursor: pointer;
     z-index: 10;
@@ -94,7 +93,7 @@
 
 .menu-mobile .menu ul li:hover
 {
-    background-color: rgba(73, 141, 73, .8);
+    background-color: rgba(100, 100, 100, .5);
 }
 /* End Style Menu Mobile  */
 
@@ -133,16 +132,16 @@
 
 .menu-desktop .menu ul a:hover
 {
-    border-bottom: 3px solid rgba(73, 141, 73, .8);
+    border-bottom: 3px solid rgba(100, 100, 100, .5);
 }
 
 .logo-menu
 {
-    font-size: 2rem;
     text-decoration:none ;
     color: rgb(73, 141, 73);
     font-family: 'Oxygen', sans-serif;
-    top: 22px;
+    top: 7px;
+    margin-left: 20px;
     font-weight: bold;
 }
 /* End Menu Desktop */
@@ -171,7 +170,7 @@
     .logo-menu
     {   
         position: absolute;
-        right: 30px;
+        right: 10px;
         
     }
     .icon-menu

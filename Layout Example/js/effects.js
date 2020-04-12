@@ -123,7 +123,7 @@ function typeWriter(elemento)
             }
             else
                 elemento.innerHTML += texto[c]
-        }, 90 * c)
+        }, 75 * c)
      
     }
     /* document.head.removeChild(document.getElementById('typewriter')) */
