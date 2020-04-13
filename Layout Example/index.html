@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/effects.css">
     <script src="js/effects.js"></script>
 
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
     <link  rel="stylesheet" type="text/css" href="css/wavyCicle.css">
-    <link  rel="stylesheet" type="text/css" href="css/styles.css">
+    <link  rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 
@@ -22,19 +22,18 @@
         <div class="menu-container menu-desktop">
             <div class="menu">
                 <ul>
-                    <a href="#"><li>Inicio</li></a>
-                    <a href="#"><li>Portfólio</li></a>
+                    <a href="#inicio"><li>Inicio</li></a>
+                    <a href="#sobre"><li>Sobre</li></a>
                     <a href="#"><li>Contato</li></a>
-                    <a href="#"><li>Sobre</li></a>
                 </ul>
             </div>
         </div>
     </header>
 
-    <section class="container-body">
+    <section id="inicio" class="container-body">
         <div class="text-body">
             <h3 id="typeWriter">
-                ANKH TECH
+                ARKH-TECH
                 \\
                 SOLUÇÕES DIGITAIS 
                 \\
@@ -78,7 +77,7 @@
 
     </section>
 
-    <section class="container-text">
+    <section id="sobre" class="container-text">
         <div class="content-text">
             <div class="content-text-title">
                 <h1>Qualidade <br>e<br> Segurança</h1>
@@ -102,41 +101,17 @@
         </div>
     </section>
 
-
-
-<!-- MODAL -->
-    <div class="modal-container" id="modal-container">
-        <div class="modal">
-            <div class="modal-header">
-                <h3>Contato</h3>
-                <span>&times;</span>
-            </div>
-            <div class="modal-body">
-                Whatsapp (15) 99647-0168 
-            </div>
-            <div class="modal-footer">
-                <input type="button" class="btn-modal-ok" value="Ok">
-            </div>
-        </div>
-    </div>
-<!-- FIM MODAL -->
-
+<!-- FOOTER -->
     <footer class="container-footer">
-        <div class="content-footer-left">
-            
-        </div>
+        <div class="content-footer-left"></div>
+        <div class="content-footer-center">ARKH-TECH</div>
         <div class="content-footer-right">
             <a href="https://www.facebook.com/tiago.r.floyd" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
             <a href=""></a>
             <a href="https://www.github.com/tiagodiana" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-            <a  id="show-modal"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a  href="javascript:sendMensageWhastapp();"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
 
         </div>
     </footer>
-
-    <script>
-
-        
-    </script>
 </body>
 </html>

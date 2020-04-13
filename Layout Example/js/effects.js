@@ -48,8 +48,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 
     menu.addEventListener('click', (e)=>{
-        console.log("Click menu")
-        if(show && e.target.classList[0] == 'menu-container' && menu.classList.contains('menu-mobile')){
+        console.log()
+        if(show && e.target.classList[0] == 'menu-container' && menu.classList.contains('menu-mobile') || e.target.tagName.toLowerCase() == 'li'){
             show = !show
             closeMenu()
         }                    
@@ -123,7 +123,7 @@ function typeWriter(elemento)
             }
             else
                 elemento.innerHTML += texto[c]
-        }, 75 * c)
+        }, 60 * c)
      
     }
     /* document.head.removeChild(document.getElementById('typewriter')) */

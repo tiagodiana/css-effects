@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Prompt:600|Roboto:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Prompt:600|Aldrich&display=swap');
 /* ---------------------------------- Style Menu ---------------------- */
 /* Style Menu Mobile */
 /* 
 COLORS:
     Green rgba(73, 141, 73, .8) 
+    Green 2 #6F8A78
     Grey  rgba(100, 100, 100, .5)
 */
 .menu-container
@@ -38,7 +38,7 @@ COLORS:
 {
     position: absolute;
     font-size: 2.5rem;
-    color: rgba(150, 150, 150, 1);
+    color: #6F8A78;
     margin: 25px 0 10px 20px;
     cursor: pointer;
     z-index: 10;
@@ -93,7 +93,8 @@ COLORS:
 
 .menu-mobile .menu ul li:hover
 {
-    background-color: rgba(100, 100, 100, .5);
+    background-color: #6F8A78;
+    text-shadow: 2px 1px 1px  black;
 }
 /* End Style Menu Mobile  */
 
@@ -132,7 +133,7 @@ COLORS:
 
 .menu-desktop .menu ul a:hover
 {
-    border-bottom: 3px solid rgba(100, 100, 100, .5);
+    border-bottom: 3px solid #6F8A78;
 }
 
 .logo-menu
@@ -141,6 +142,7 @@ COLORS:
     color: rgb(73, 141, 73);
     font-family: 'Oxygen', sans-serif;
     top: 7px;
+    margin-top: 10px;
     margin-left: 20px;
     font-weight: bold;
 }
@@ -171,7 +173,11 @@ COLORS:
     {   
         position: absolute;
         right: 10px;
-        
+        top:20px;
+    }
+    .logo-menu img
+    {
+        width: 170px;
     }
     .icon-menu
     {
